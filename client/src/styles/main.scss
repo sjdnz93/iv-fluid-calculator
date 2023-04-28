@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgb(27, 18, 180);
+  background: linear-gradient(133deg, rgba(27, 18, 180, 1) 45%, rgba(0, 212, 255, 1) 92%);
+
+}
+
 main {
   text-align: center;
   height: 100vh;
@@ -11,6 +17,28 @@ main {
 }
 
 .wrapper {
-  border: solid 1px;
-  padding: 5%;
+  margin: 0 10px;
+  padding: 20px;
+  background: skyblue;
+  border-radius: 10px;
+  border: solid 5px grey;
+  width: 500px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+
+  button {
+    width: 100px;
+  }
+}
+
+p {
+
+  font-size: 27px;
+
+  span {
+    font-weight: bold;
+  }
 }
