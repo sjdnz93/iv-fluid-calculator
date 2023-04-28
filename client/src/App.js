@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-
-
 const App = () => {
 
   const [dose, setDose] = useState('')
@@ -40,9 +38,6 @@ const App = () => {
     setWeight('')
   }
 
-
-
-
   return (
     <main>
 
@@ -62,10 +57,6 @@ const App = () => {
 
 
     </main>
-
-
-
-
   )
 }
 
