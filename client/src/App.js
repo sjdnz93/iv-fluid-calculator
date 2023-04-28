@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -11,15 +11,11 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log('WEIGHT', weight)
-
     if (weight <= 10) {
       const doseFinal = weight * 100
-      console.log(`${doseFinal}ml per 24 hours.`)
       setDose(`${doseFinal}ml per 24 hours.`)
     } else if (weight > 10 && weight <= 20) {
       const dosePlusTen = ((weight - 10) * 50) + 1000
-      console.log(dosePlusTen)
       setDose(`${dosePlusTen}ml per 24 hours.`)
     } else if (weight > 20) {
       const dosePlusTwenty = ((weight - 20) * 20) + 1500
@@ -50,7 +46,7 @@ const App = () => {
           </Form.Group>
           <h2>Result</h2>
           <p>{dose ? `Dose is ${dose}` : 'Input weight into calculator.'}</p>
-          <Button variant='primary' type='submit'>Calculate</Button>
+          <Button variant='primary' type='submit' className={weight ? 'active' : 'disabled'}>Calculate</Button>
           <Button variant='danger' type='reset' onClick={clearForm}>Clear</Button>
         </Form>
       </div>
