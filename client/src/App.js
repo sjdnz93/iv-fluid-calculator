@@ -2,6 +2,9 @@ import { useState } from 'react'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
+
+import logo from './images/poole.jpeg'
 
 const App = () => {
 
@@ -37,6 +40,8 @@ const App = () => {
   return (
     <main>
 
+      <Image src={logo} alt='poole-nhs-logo' className='logo'></Image>
+      
       <div className='wrapper'>
         <Form className='form' onSubmit={handleSubmit}>
           <h1>IV Fluid Calculator</h1>
